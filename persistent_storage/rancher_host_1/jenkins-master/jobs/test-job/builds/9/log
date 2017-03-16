@@ -1,0 +1,9 @@
+Started by user [8mha:////4DkadYX9aVAie/cs7OINKmnmel1YoyOZOAlS4XazdLh4AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL9rNS87My8YgDGtiJjwgAAAA==[0mjenkins
+ln -s builds/lastSuccessfulBuild /var/jenkins_home/jobs/test-job/lastSuccessful failed: 71 Protocol error
+ln -s builds/lastStableBuild /var/jenkins_home/jobs/test-job/lastStable failed: 71 Protocol error
+Building on master in workspace /var/jenkins_home/workspace/test-job
+[test-job] $ /bin/sh -xe /tmp/hudson3279801216090313113.sh
++ docker -v
+/tmp/hudson3279801216090313113.sh: 2: /tmp/hudson3279801216090313113.sh: docker: not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
