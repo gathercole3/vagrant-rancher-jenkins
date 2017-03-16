@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
+  <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties/>
@@ -13,10 +14,11 @@
   <builders>
     <hudson.tasks.Shell>
       <command>docker -v
-docker run ubuntu /bin/echo hello world
-docker stop $(docker ps -a -q)
-docker rm $(docker ps -a -q)
-docker rmi $(docker images -q)</command>
+docker run -d --name testUbuntu ubuntu /bin/echo hello world
+docker logs testUbuntu
+docker stop testUbuntu
+docker rm testUbuntu
+docker rmi ubuntu</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
