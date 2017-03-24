@@ -1,0 +1,33 @@
+Started by user [8mha:////4DO4H03Gzq9qAGWrOtiKfbU8xexeXOVzvsg/C0zCUG9oAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+ln -s builds/lastSuccessfulBuild /var/jenkins_home/jobs/flask-frontend-skeleton/lastSuccessful failed: 71 Protocol error
+ln -s builds/lastStableBuild /var/jenkins_home/jobs/flask-frontend-skeleton/lastStable failed: 71 Protocol error
+Building remotely on [8mha:////4OwRDZDZhrLsET4StESyPT5MlG824P7w1uKLbP7dQ1F2AAAAsB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyFEgYt/eT83ILSktQi/azUvOzMvGJdGF2ck1iWqmuka55oZpJiYJwEAI49fkjfAAAA[0mjenkins-jenkins-slave-2-7a64d03b (swarm) in workspace /home/jenkins-slave/workspace/flask-frontend-skeleton
+Cloning the remote Git repository
+Cloning repository https://github.com/gathercole3/flask-frontend-skeleton.git
+ > git init /home/jenkins-slave/workspace/flask-frontend-skeleton # timeout=10
+Fetching upstream changes from https://github.com/gathercole3/flask-frontend-skeleton.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/gathercole3/flask-frontend-skeleton.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/gathercole3/flask-frontend-skeleton.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/gathercole3/flask-frontend-skeleton.git # timeout=10
+Fetching upstream changes from https://github.com/gathercole3/flask-frontend-skeleton.git
+ > git fetch --tags --progress https://github.com/gathercole3/flask-frontend-skeleton.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision b262fc07dd8587d17e8e8093d49760b17639920e (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b262fc07dd8587d17e8e8093d49760b17639920e
+First time build. Skipping changelog.
+[flask-frontend-skeleton] $ /bin/sh -xe /tmp/hudson9140710736879143328.sh
++ ls
+Dockerfile
+Makefile
+README.md
+flask_frontend_skeleton
+manage.py
+requirements.txt
+requirements_test.txt
+setup.cfg
+unit_tests
+Finished: SUCCESS

@@ -1,1 +1,3 @@
 persistent_storage/rancher_host_1/jenkins-master/logs/
+
+persistent_storage/rancher_host_1/jenkins-master/jobs/*/builds
