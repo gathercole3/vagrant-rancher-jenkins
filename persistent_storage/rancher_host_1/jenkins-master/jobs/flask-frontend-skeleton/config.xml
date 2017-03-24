@@ -28,9 +28,30 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>ls</command>
+      <command>docker build -t flask-frontend-skeleton .
+
+docker run -d -t -e APP_NAME=&apos;flask_frontend_skeleton&apos; \
+-e FLASK_LOG_LEVEL=&apos;DEBUG&apos; \
+-e PYTHONPATH=&apos;/opt&apos; \
+--name flask-frontend-skeleton-test flask-frontend-skeleton</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>docker exec flask-frontend-skeleton-test make unittest</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <org.jenkinsci.plugins.postbuildscript.PostBuildScript plugin="postbuildscript@0.17">
+      <buildSteps>
+        <hudson.tasks.Shell>
+          <command>docker stop flask-frontend-skeleton-test
+docker rm flask-frontend-skeleton-test
+docker rmi flask-frontend-skeleton</command>
+        </hudson.tasks.Shell>
+      </buildSteps>
+      <scriptOnlyIfSuccess>false</scriptOnlyIfSuccess>
+      <scriptOnlyIfFailure>false</scriptOnlyIfFailure>
+      <markBuildUnstable>false</markBuildUnstable>
+    </org.jenkinsci.plugins.postbuildscript.PostBuildScript>
+  </publishers>
   <buildWrappers/>
 </project>
